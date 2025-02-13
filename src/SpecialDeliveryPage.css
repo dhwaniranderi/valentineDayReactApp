@@ -1,0 +1,75 @@
+/* Container for the entire Special Delivery page */
+.special-delivery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffb6c1, #ff3366);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Card styling */
+  .special-delivery-card {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  /* Title styling */
+  .special-delivery-title {
+    font-size: 33px;
+    color: #ff3366;
+    cursor: pointer;
+  }
+  
+  .special-delivery-title h3 {
+    font-size: 23px;
+    color: #ff3366;
+    cursor: pointer;
+  }
+  
+  
+.delivery-title {
+    font-size: 20px;
+    color: #ff3366;
+    cursor: pointer;
+  }
+  
+ 
+  /* Styling the button with a gift box image */
+  .special-delivery-button {
+    background-image: url('../public/images/gift-9234_512.gif'); /* Replace with your gift box image URL */
+    background-size: cover; /* Ensure the image covers the button */
+    background-position: center;
+    width: 200px;
+    height: 200px; /* Adjust size to match the image */
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Optional: makes the button corners rounded */
+  }
+  
+  
+  /* Optional: active effect for clicking */
+  .special-delivery-button:active {
+    transform: scale(0.98); /* Shrinks when clicked */
+  }
+  
+  /* Optional: Add a label text on top of the image (to make it more readable) */
+  .special-delivery-button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for readability */
+    text-align: center;
+  }
+  

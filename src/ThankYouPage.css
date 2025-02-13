@@ -1,0 +1,106 @@
+.thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: #ffb6c1;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.thank-you-card {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.thank-you-title {
+  font-size: 2.5em;
+  color: #ff3366;
+  margin-bottom: 20px;
+}
+
+.thank-you-message {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.thank-you-button {
+  background-color: #ff3366;
+  color: white;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 180px;
+}
+
+.thank-you-button:hover {
+  background-color: #f57a9d;
+}
+/* Popup styling */
+.hug-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+  opacity: 1;
+  animation: popupAnimation 0.5s ease-in-out;
+}
+
+/* Style for the "Hug Sent!" message */
+.hug-popup p {
+  font-size: 2em;
+  color: #ff3366;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  animation: textFadeIn 1s ease-out;
+}
+
+/* Pop-up hug gif style */
+.popup-hug-gif {
+  margin-top: 10px;
+  width: 80%;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+/* Popup animation */
+@keyframes popupAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Animation for the text */
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

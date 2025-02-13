@@ -1,0 +1,285 @@
+/* Main container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ffb6c1, #ff3366);
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Card styling */
+.card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 550px;
+  animation: fadeIn 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add cute heart sparkles in the background of the card */
+.card:before {
+  content: '💖';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  font-size: 3rem;
+  animation: sparkle 3s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0.7;
+    transform: translate(0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(10px, -10px);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translate(0, 0);
+  }
+}
+
+/* Special tag styling */
+.special-tag {
+  font-size: 1.3em;
+  color: #ff3366;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: rgba(255, 51, 102, 0.2);
+}
+
+/* Title with heart icon */
+.title {
+  font-size: 2.8em;
+  color: #ff3366;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  position: relative;
+}
+
+.heart-icon {
+  margin-right: 10px;
+  color: #ff3366;
+  font-size: 1.5em;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Message styling */
+.message {
+  font-size: 1.3em;
+  color: #555;
+  margin-bottom: 30px;
+  font-style: italic;
+  letter-spacing: 1px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+}
+
+/* GIF container styling */
+.gif-container {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.teddy-bear-gif {
+  width: 30%;
+  height: 30%;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  border: 3px solid #ff3366;
+}
+
+.teddy-bear-gif:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.yes-button,
+.no-button {
+  font-size: 1.2em;
+  padding: 15px; /* Keeping the original padding from the initial design */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 200px; /* Keep the same width as before */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-grow: 1; /* Make the button grow proportionally */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Yes button base style */
+.yes-button {
+  background-color: #28f759;
+  color: black;
+  box-shadow: 0 5px 15px rgba(40, 247, 89, 0.2);
+}
+
+.no-button {
+  background-color: #c70334;
+  color: white;
+  box-shadow: 0 5px 15px rgba(199, 3, 52, 0.2);
+}
+
+/* Button scaling and hover effects */
+.yes-button:hover {
+  background-color: #a8f6a6;
+}
+
+.no-button:hover {
+  background-color: #f57a9d;
+}
+
+/* Button active state */
+.yes-button:active,
+.no-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure the Yes button overlaps the Maybe button */
+.yes-button {
+  z-index: 2; /* Ensure Yes button is above the Maybe button when scaled */
+}
+
+.no-button {
+  z-index: 1; /* Keep Maybe button below the Yes button */
+}
+
+/* Response box styling */
+.response-box {
+  margin-top: 20px;
+  background-color: #f7a6c4;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Cute heart confetti */
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confetti {
+  width: 20px;
+  height: 20px;
+  background-color: #ff3366;
+  shape-outside: circle;
+  clip-path: circle(50%);
+  animation: confettiAnim 1s infinite ease-in-out;
+}
+
+@keyframes confettiAnim {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* Animations for smooth transitions */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .card {
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2.2em;
+  }
+
+  .message {
+    font-size: 1.1em;
+  }
+
+  .yes-button,
+  .no-button {
+    font-size: 1em;
+    padding: 12px 25px; /* Keep padding the same for mobile */
+  }
+
+  .response-box {
+    font-size: 1.1em;
+    padding: 12px;
+  }
+
+  /* Confetti style adjustments for small screens */
+  .confetti {
+    width: 15px;
+    height: 15px;
+  }
+}
